@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Us - IEEE AIU</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+<nav>
+    <div class="nav-left">
+      <div class="logo">
+        <img src="WhatsApp Image 2025-07-24 at 16.38.24_ed4d3f80.jpg" width="100" alt="Logo">
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="joinus.html">Join Us</a></li>
+        </ul>
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+      </div>
+  </nav>
+
+  <section class="join">
+    <h1>Register now</h1>
+    <h2>IEEE AIU Technical Form</h2>
+    <p>Please fill out the form below to complete your registration.</p><br>
+<form id="join-form">
+  <input type="text" name="full_name" placeholder="Full Name" required>
+  <input type="email" name="university_email" placeholder="University Email" required>
+  <input type="tel" name="phone_number" placeholder="Phone Number" required>
+
+  <select name="faculty" required>
+    <option value="" disabled selected>Field of Study / Faculty</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Engineering">Engineering</option>
+  </select>
+
+  <select name="year" required>
+    <option value="" disabled selected>Year of Study</option>
+    <option value="1st Year">1st Year</option>
+    <option value="2nd Year">2nd Year</option>
+    <option value="3rd Year">3rd Year</option>
+    <option value="4th Year">4th Year</option>
+  </select>
+
+  <select name="committee" required>
+    <option value="" disabled selected>Committees</option>
+    <option value="AI">AI</option>
+    <option value="Mobile Application">Mobile Application</option>
+    <option value="Web Development">Web Development</option>
+    <option value="Fundamentals">Fundamentals</option>
+    <option value="Cybersecurity">Cybersecurity</option>
+  </select>
+
+  <button type="submit">Submit Registration</button>
+</form>
+    
+
+  </section>
+
+  <footer>
+       <p>© 2025 IEEE AIU Student Branch. All rights reserved.<br>Developed by IEEE AIU Web Development Team</p>
+    <p>📍 Alamein, Marsa Matrouh, Egypt</p>
+    <div class="social-icons">
+  <a href="https://www.facebook.com/AiuOfficialgov/" target="_blank">
+    <i class="fa-brands fa-facebook-f" style="font-size: 24px; color: white;"></i>
+  </a>
+  <a href="https://www.linkedin.com/school/alamein-international-university/posts/?feedView=all" target="_blank">
+    <i class="fa-brands fa-linkedin-in" style="font-size: 24px; color: white;"></i>
+  </a>
+  <a href="https://www.instagram.com/alameininternationaluni/" target="_blank">
+    <i class="fa-brands fa-instagram" style="font-size: 24px; color: white;"></i>
+  </a>
+</div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+      document.body.classList.replace('light-theme', 'dark-theme');
+      toggle.checked = true;
+    }
+    toggle.addEventListener('change', function () {
+      if (this.checked) {
+        document.body.classList.replace('light-theme', 'dark-theme');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.replace('dark-theme', 'light-theme');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("O1ykJXpfokklMF2sP");
+  document.getElementById('join-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_rqnu93f', 'template_0jo4k8m', this).then(
+      function() {
+         alert("Form submitted successfully!");
+      },
+       function(error) {
+         alert(" Error: " + JSON.stringify(error));
+      }
+      );
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IEEE AIU - Home</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+  <nav>
+    <div class="nav-left">
+      <div class="logo">
+        <img src="WhatsApp Image 2025-07-24 at 16.38.24_ed4d3f80.jpg" width="100" alt="Logo">
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="joinus.html">Join Us</a></li>
+        </ul>
+    <label class="theme-switch"></label>
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+      </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Participation of AIU in IEEE Global conference on Artificial Intelligence and Internet of Things.</h1>
+      On assignment from Prof. Dr. Essam Elkordi, President of the University, Prof. Dr. Mustafa Elnainay, Dean of the Faculty of Computer Science and Engineering and Vice Chair of the Technical Committee of the Conference, attended the IEEE Global Conference on Artificial Intelligence and Internet of Things, 13 – 16 December in The United Arab Emirates.
+      This took place as a prelude to hosting the Conference at Alamein International University next year 2022.
+      Most notably, the conference includes many events in addition to the Scientific Conference, as it includes the finals of the African Challenge for the Internet of Things and Artificial Intelligence, the Industry Summit Track and the IEEE 5G Forum.
+      The conference is attended by speakers from International companies and institutions and many international universities.
+    </h4>
+
+    <div class="image-row">
+      <img src="WhatsApp Image 2025-07-23 at 20.10.36_8e1b0305.jpg" alt="Photo 1">
+      <img src="WhatsApp Image 2025-07-23 at 20.10.36_01bbb7ca.jpg" alt="Conference Photo 2">
+      <img src="WhatsApp Image 2025-07-23 at 20.10.37_a7c5eaac.jpg" alt="Conference Photo 3">
+    </div>
+  </header>
+
+  <footer>
+    <p>© 2025 IEEE AIU Student Branch. All rights reserved.<br>Developed by IEEE AIU Web Development Team</p>
+    <p>📍 Alamein, Marsa Matrouh, Egypt</p>
+    <div class="social-icons">
+  <a href="https://www.facebook.com/AiuOfficialgov/" target="_blank">
+    <i class="fa-brands fa-facebook-f" style="font-size: 24px; color: white;"></i>
+  </a>
+  <a href="https://www.linkedin.com/school/alamein-international-university/posts/?feedView=all" target="_blank">
+    <i class="fa-brands fa-linkedin-in" style="font-size: 24px; color: white;"></i>
+  </a>
+  <a href="https://www.instagram.com/alameininternationaluni/" target="_blank">
+    <i class="fa-brands fa-instagram" style="font-size: 24px; color: white;"></i>
+  </a>
+</div>
+
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+      document.body.classList.replace('light-theme', 'dark-theme');
+      toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', function () {
+      if (this.checked) {
+        document.body.classList.replace('light-theme', 'dark-theme');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.replace('dark-theme', 'light-theme');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
